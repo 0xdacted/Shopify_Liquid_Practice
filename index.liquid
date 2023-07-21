@@ -72,3 +72,25 @@ Anything in between capture open and end is assigned to myString2.
     {{ i }}
   {% endfor %}
 </div>
+
+<div class="wrapper">
+  {% liquid 
+    assign age = 33
+    assign sex = "male"
+    assign favoriteFruit = "orange"
+
+    if favoriteFruit == "orange"
+    assign likesOranges = "yes"
+    else 
+    assign likesOranges = ""
+    endif
+  %}
+  {{ age }}
+  {{ sex }}
+  {{ favoriteFruit }}
+  {% if likesOranges == blank %}
+    Do you like oranges?
+  {% else %}
+    {{ likesOranges }}
+  {% endif %}
+</div>
