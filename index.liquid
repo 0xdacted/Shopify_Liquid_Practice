@@ -113,3 +113,13 @@ Anything in between capture open and end is assigned to myString2.
   <img src="{{ "dog.jpg" | asset_url }}">
   <img src="{{ "dog.jpg" | asset_img_url: "200x" }}">
 </div>
+
+<div class="wrapper">
+  {% assign channel = "Coding Practice"%}
+  {% assign price = 999 %}
+
+  <h2> {{ channel | upcase | append: " for job interviews" | replace: "interviews", "prep" }} <h2/>
+  <p> {{ price | money }} </p>
+
+  {{ 'style.css' | stylesheet_tag }}
+</div>
