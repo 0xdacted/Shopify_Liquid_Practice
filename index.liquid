@@ -1,5 +1,10 @@
 <div class="wrapper">
-{% assign myString  = "Hello World" %}
+{% assign myString  = "Assign a variable myString" %}
+<p> {{ myString }} </p>
 
-{{ myString }}
+{% capture myString2 %}
+Anything in between capture open and end is assigned to myString2.
+{% endcapture %}
+
+<p> {{ myString2 }} </p>
 </div>
