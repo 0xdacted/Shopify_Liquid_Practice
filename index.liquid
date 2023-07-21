@@ -143,3 +143,27 @@ Anything in between capture open and end is assigned to myString2.
 
   {% section "header" %}
 </div>
+
+<div class="wrapper">
+  {% for collection in collections %}
+    <h2> {{ collection.title }} </h2>
+    {% unless collection.description == blank %}
+      <p> {{ collection.description }}</p>
+    {% endunless %}
+
+    {% for product in collection.products %}
+      {% if featured_image %}
+        <img src="{{ product | image_url }}">
+      {% endif %}
+      <h3>{{ product.title }}</h3>
+      <p>{{product.price | money }}</p>
+      <ul>
+        {% for tag in product.tags %}
+          <li><{{ tag }}/li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {% No products available in {{ collection.title }}. %}
+    {% endfor %}
+  {% endfor %}
+</div>
