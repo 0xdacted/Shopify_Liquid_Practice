@@ -53,5 +53,10 @@ Anything in between capture open and end is assigned to myString2.
     {% else %}
       <p> You are not 24 or 21 years old. </p>
   {% endcase %}
+</div>
 
+<div class="wrapper">
+  {% for collection in collections %}
+    <p> {{ collection.title }} </p>
+  {% endfor %}
 </div>
