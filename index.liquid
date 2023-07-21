@@ -94,3 +94,11 @@ Anything in between capture open and end is assigned to myString2.
     {{ likesOranges }}
   {% endif %}
 </div>
+
+<div class="wrapper">
+  {% assign channel = "Coding Practice"%}
+  {% assign price = 999 %}
+
+  <h2> {{ channel | upcase | append: " for job interviews" | replace: "interviews", "prep" }} <h2/>
+    <p> {{ price | money }} </p>
+  </div>
