@@ -16,11 +16,11 @@ Anything in between capture open and end is assigned to myString2.
   {% assign string = "Hello World" %}
 
   {% if age > 20 or sex == "male" %}
-    You can view this text.
+    You can only view this text if you are 21+ or a male.
   {% elsif age > 17 and placeOfBirth == "United States" %}
-    You can only view this text.
+    You can only view this text if you are 18+ and located in the United States
   {% else %}
-    You are too young to view this text.
+    You are not 21+, not a male. You are also not 18+ and located in the United States.
   {% endif %}
 </div>
 
@@ -31,7 +31,9 @@ Anything in between capture open and end is assigned to myString2.
   {% assign string = "Hello World" %}
 
   {% unless string contains "World" %}
-    Invalid string.
+    String contains World.
+  {% else %}
+    Unless does not have else if
   {% endunless %}
 
 </div>
