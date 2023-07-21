@@ -57,6 +57,18 @@ Anything in between capture open and end is assigned to myString2.
 
 <div class="wrapper">
   {% for collection in collections %}
+    {{ forloop.index }}
+    {% if collection.title == "Skip"%}
+      {% continue %}
+    {% elsif collection.title == "End Loop"%}
+      {% break %}
+    {% endif %}
     <p> {{ collection.title }} </p>
+  {% else %}
+    <p> Collections is empty. </p>
+  {% endfor %}
+
+  {% for i in (1..3) %}
+    {{ i }}
   {% endfor %}
 </div>
