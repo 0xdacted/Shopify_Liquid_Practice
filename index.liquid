@@ -14,5 +14,9 @@ Anything in between capture open and end is assigned to myString2.
 
   {% if age > 20 %}
     You can view this text.
+  {% elsif age > 17 %}
+    You can only view this text.
+  {% else %}
+    You are too young to view this text.
   {% endif %}
 </div>
