@@ -1,5 +1,5 @@
 <div class="wrapper">
-{% assign myString  = "Assign a variable myString" %}
+{% assign myString  = "Assign a variable myString. Can only assign strings, numbers, booleans." %}
 <p> {{ myString }} </p>
 
 {% capture myString2 %}
@@ -7,4 +7,12 @@ Anything in between capture open and end is assigned to myString2.
 {% endcapture %}
 
 <p> {{ myString2 }} </p>
+</div>
+
+<div class="wrapper">
+  {% assign age = 20 %}
+
+  {% if age > 20 %}
+    You can view this text.
+  {% endif %}
 </div>
