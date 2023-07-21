@@ -11,10 +11,12 @@ Anything in between capture open and end is assigned to myString2.
 
 <div class="wrapper">
   {% assign age = 20 %}
+  {% assign sex = "male" %}
+  {% assign placeOfBirth = "United States" %}
 
-  {% if age > 20 %}
+  {% if age > 20 or sex == "male" %}
     You can view this text.
-  {% elsif age > 17 %}
+  {% elsif age > 17 and placeOfBirth == "United States" %}
     You can only view this text.
   {% else %}
     You are too young to view this text.
